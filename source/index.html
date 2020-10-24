@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>«Moon» - Магазин велосипедов</title>
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
+    <link rel="preload" href="fonts/opensan-Bold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <nav class="page-header__item main-nav">
+        <div class="main-nav__bar">
+          <img class="main-nav__logo" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button" aria-label="Открыть"></button>
+        </div>
+
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#about">О нас</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#types">Виды велосипедов</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#video">Видео про велосипеды</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
