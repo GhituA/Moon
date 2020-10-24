@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Open Sans Regular";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Open Sans Light";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -23,9 +23,17 @@
 }
 
 @font-face {
-  font-family: "Open Sans Bold";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/overpass-bold.woff2") format("woff2"), url("../fonts/overpass-bold.woff") format("woff");
 }
