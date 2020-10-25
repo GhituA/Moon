@@ -40,11 +40,14 @@
 
   </head>
   <body class="page">
+
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
     <header class="page-header">
-      <div class="page-header__container">
 
         <nav class="page-header__item main-nav">
-
           <div class="main-nav__bar">
             <img class="main-nav__logo" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
             <button class="main-nav__toggle main-nav__toggle--hidden" type="button" aria-label="Открыть"></button>
@@ -66,7 +69,6 @@
           </ul>
         </nav>
 
-
         <div class="page-header__item site-intro">
           <div class="site-intro__head">
             <h1>Мы продаем велосипеды</h1>
@@ -75,29 +77,66 @@
 
           <div class="site-intro__callback">
             <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-
             <form class="site-intro__form" method="post" action="https://echo.htmlacademy.ru" autocomplete="off">
               <ul class="site-intro__list">
-
                 <li class="site-intro__list-item">
                   <label class="visually-hidden" for="username">Имя</label>
                   <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" required>
                 </li>
-
                 <li class="callback__list-item">
                   <label class="visually-hidden" for="phone">Телефон</label>
                   <input type="tel" id="phone" name="phone" pattern="[0-9]{12}"  placeholder="Введите Ваш номер телефона" required>
                 </li>
-
               </ul>
               <button type="submit">Подобрать велосипед мечты</button>
             </form>
           </div>
         </div>
-      </div>
 
     </header>
 
+    <footer class="page-footer" id="contacts">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+
+
+      <section class="page-footer__map map map--no-js">
+        <div class="map__container" id="map__container"></div>
+        <picture>
+          <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
+            <!-- 1х: 957px; 2x: 1914px -->
+          <img class="map__image" src="img/map@1x.jpg" width="957" height="530" srcset="img/map@2x.jpg 2x" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19" data-object-fit="cover">
+        </picture>
+      </section>
+
+
+      <section class="page-footer__contacts contacts">
+        <ul class="contacts__list">
+
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru" aria-label="Почта">
+              <svg class="contacts__icon" width="26" height="22">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+              <span class="contacts__mail-adress">puteshestviemechta@gmail.ru</span>
+            </a>
+          </li>
+
+
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--phone" href="tel:849978468446" aria-label="Телефон">
+              <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+              <span>+7 (499) -784-684-46</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+
     <script src="js/script.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk6uBmJpjAaLIfkYjehWvMqWQktKwuESw&callback=initMap"></script>
   </body>
 </html>
