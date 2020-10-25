@@ -25,6 +25,7 @@
     min-height: auto;
     background-image: url("../img/hero-tabdesk@1x.jpg");
     background-size: auto 340px;
+    background-position-y: 385px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tabdesk@2x.jpg");
@@ -35,9 +36,22 @@
     min-height: auto;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: auto 390px;
+    background-position-y: 385px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
     }
+  }
+
+  &--js {
+    @media (max-width: 1023px){
+      background-position: center top;
+    }
+  }
+}
+
+.page-header__container--js .site-list {
+  @media (max-width: 1023px) {
+    display: none;
   }
 }

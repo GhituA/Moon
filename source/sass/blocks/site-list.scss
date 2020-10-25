@@ -53,29 +53,29 @@
   }
 
   @media (max-width: 1023px) {
-  padding-top: 17px;
-  padding-left: 16px;
-  padding-right: 35px;
-  margin-bottom: 17px;
+    padding-top: 17px;
+    padding-left: 16px;
+    padding-right: 35px;
+    margin-bottom: 17px;
 
-  font-size: 20px;
-  line-height: 28px;
-  color: $grey;
-  background-color: $grey-back;
+    font-size: 20px;
+    line-height: 28px;
+    color: $grey;
+    background-color: $grey-back;
 
-  &::after {
-    content: " ";
-    position: absolute;
+    &::after {
+      content: " ";
+      position: absolute;
 
-    top: 50%;
-    right: 24px;
+      top: 50%;
+      right: 24px;
 
-    margin-top: -6px;
-    width: 8px;
-    height: 12px;
+      margin-top: -6px;
+      width: 8px;
+      height: 12px;
 
-    background-image: url("../img/icon-arrow-right.svg");
-    background-repeat: no-repeat;
+      background-image: url("../img/icon-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
   }
-}
 }
