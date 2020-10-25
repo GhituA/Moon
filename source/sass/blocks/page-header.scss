@@ -1,0 +1,43 @@
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  width: $desktop-full-width;
+  min-height: 825px;
+
+  background-color: $grey-back-dark;
+  background-image: url("../img/hero-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
+    background-size: auto 825px;
+  }
+
+  @media (max-width: 1439px) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1023px) {
+    min-height: auto;
+    background-image: url("../img/hero-tabdesk@1x.jpg");
+    background-size: auto 340px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tabdesk@2x.jpg");
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    min-height: auto;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-size: auto 390px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
+  }
+}

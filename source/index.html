@@ -6,32 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>«Moon» - Магазин велосипедов</title>
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
-    <link rel="preload" href="fonts/opensan-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
+
+
+    <!-- Pixel Glass -->
+  <!-- <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url( "img/320.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/760.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1024px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/960.jpg" );
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
+  <!-- // Pixel Glass -->
+
+
   </head>
   <body class="page">
     <header class="page-header">
-      <nav class="page-header__item main-nav">
-        <div class="main-nav__bar">
-          <img class="main-nav__logo" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
-          <button class="main-nav__toggle main-nav__toggle--hidden" type="button" aria-label="Открыть"></button>
-        </div>
+      <div class="page-header__container">
 
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#about">О нас</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#types">Виды велосипедов</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#video">Видео про велосипеды</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="page-header__item main-nav">
+
+          <div class="main-nav__bar">
+            <img class="main-nav__logo" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
+            <button class="main-nav__toggle main-nav__toggle--hidden" type="button" aria-label="Открыть"></button>
+          </div>
+
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#about">О нас</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#types">Виды велосипедов</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#video">Видео про велосипеды</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="page-header__item site-intro">
+          <div class="site-intro__head">
+            <h1>Мы продаем велосипеды</h1>
+            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          </div>
+
+          <div class="site-intro__callback">
+            <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+
+            <form class="site-intro__form" method="post" action="https://echo.htmlacademy.ru" autocomplete="off">
+              <ul class="site-intro__list">
+
+                <li class="site-intro__list-item">
+                  <label class="visually-hidden" for="username">Имя</label>
+                  <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" required>
+                </li>
+
+                <li class="callback__list-item">
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{12}"  placeholder="Введите Ваш номер телефона" required>
+                </li>
+
+              </ul>
+              <button type="submit">Подобрать велосипед мечты</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </header>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
