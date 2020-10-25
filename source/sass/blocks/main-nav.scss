@@ -4,7 +4,7 @@
   flex-direction: column-reverse;
 
   margin: 0 auto;
-  padding-bottom: 238px;
+  padding-bottom: 260px;
   width: 880px;
 
   @media (max-width: 1023px) {
@@ -31,33 +31,27 @@
 .main-nav__logo {
   position: absolute;
 
-  bottom: 0;
+  bottom: -16px;
   left: 0;
 
   @media (max-width: 1023px) {
     position: static;
-    padding-top: 25px;
-    padding-left: 21px;
+
+    margin-top: 24px;
+    margin-left: 22px;
+    height: 20px;
   }
 
   @media (max-width: 767px) {
-    padding-left: 16px;
+    margin-left: 16px;
   }
 }
-
 
 .main-nav__bar--open .main-nav__logo {
   @media (max-width: 1023px) {
     display: none;
   }
 }
-
-// .main-nav--js .site-list {
-//   @media (max-width: 1023px) {
-//     display: none;
-//   }
-// }
-
 
 .main-nav__toggle {
   position: relative;
