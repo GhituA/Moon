@@ -20,28 +20,30 @@
     width: 100%;
   }
 
-  @media (min-width: $tablet-width) and (max-width: 1023px) {
+  @media (max-width: 1023px) {
+    margin-bottom: 70px;
     min-height: auto;
     background-position-y: 385px;
     background-size: contain;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 767px) {
+  @media (max-width: 767px) {
+    margin-bottom: 70px;
     min-height: auto;
     background-position-y: 385px;
     background-size: contain;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 550px) {
+  @media (max-width: 550px) {
     background-size: auto 390px;
   }
 
   &--js {
-    @media (min-width: $tablet-width) and (max-width: 1023px) {
+    @media (max-width: 1023px) {
       background-position: center -102px;
     }
 
-    @media (min-width: $mobile-width) and (max-width: 767px) {
+    @media (max-width: 767px) {
       background-position: center 0;
     }
   }

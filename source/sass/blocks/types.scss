@@ -1,0 +1,267 @@
+.types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 148px 0;
+  width: 100%;
+
+  background-color: $grey-back-light;
+
+  @media (max-width: 1023px) {
+    padding: 50px 0 70px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 52px;
+  }
+}
+
+.types__title {
+  margin: 0 0 60px;
+  padding: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: $grey-dark;
+  letter-spacing: -0.005em;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 41px;
+  }
+}
+
+.types__list {
+  @include list-reset;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  width: 1126px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    width: 590px;
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.types__list li {
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 50px;
+
+  width: 342px;
+
+  &::before,
+  &::after {
+    transition: 0.5s;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(3n-1) {
+    padding-top: 40px;
+  }
+
+  &:nth-child(3n-2)::before {
+    position: absolute;
+    content: " ";
+    z-index: 0;
+
+    top: 0;
+    left: 0;
+
+    margin-top: 156px;
+    margin-left: -60px;
+    width: 180px;
+    height: 180px;
+
+    border: 27px solid $cyan;
+    border-radius: 50%;
+  }
+
+  &:nth-child(3n-1)::before,
+  &:nth-child(3n-1)::after {
+    position: absolute;
+    content: " ";
+    z-index: 2;
+
+    width: 47px;
+    height: 47px;
+
+    border: 8px solid $cyan;
+  }
+
+  &:nth-child(3n-1)::before {
+    top: 0;
+    left: 0;
+
+    margin-top: 19px;
+    margin-left: -22px;
+  }
+
+  &:nth-child(3n-1)::after {
+    bottom: 0;
+    right: 0;
+
+    margin-bottom: 32px;
+    margin-right: -22px;
+  }
+
+  &:nth-child(3n)::after {
+    position: absolute;
+    content: " ";
+    z-index: 2;
+
+    top: 0;
+    right: 0;
+
+    margin-top: -32px;
+    margin-right: -36px;
+
+    width: 95px;
+    height: 95px;
+
+    border: 17px solid $cyan;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .types__list li {
+    margin-right: 0;
+    margin-bottom: 50px;
+    width: 270px;
+
+    &:nth-child(3n-1) {
+      padding-top: 0;
+    }
+
+    &:nth-child(2n-2) {
+      margin-left: 50px;
+    }
+
+    &:nth-child(3n-2)::before {
+      margin-top: 200px;
+      margin-left: -37px;
+      width: 127px;
+      height: 127px;
+
+      border: 18px solid $cyan;
+    }
+
+    &:nth-child(3n-1)::before,
+    &:nth-child(3n-1)::after {
+      content: none;
+    }
+
+    &:nth-child(3n)::after {
+
+      margin-top: -20px;
+      margin-right: -25px;
+      width: 68px;
+      height: 68px;
+
+      border: 13px solid $cyan;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .types__list li {
+    margin-bottom: 40px;
+
+    &:nth-child(2n-2) {
+      margin-left: 0;
+    }
+
+    &:nth-child(3n-2)::before {
+      margin-left: -24px;
+    }
+
+    &:nth-child(3n)::after {
+      margin-right: -15px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) and (max-width: 1200px) {
+  .types__list li {
+    width: 30%;
+  }
+}
+
+.types__link {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+
+  line-height: 0;
+}
+
+.types__name {
+  margin: 0;
+  padding: 0;
+
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: $black;
+}
+
+.types__list img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+  width: 342px;
+
+  object-fit: cover;
+  transition: 0.1s;
+
+  @media (max-width: 1023px) {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+.types__link:hover,
+.types__link:focus {
+  outline: 0;
+  color: $cyan;
+}
+
+.types__link:hover img,
+.types__link:focus img {
+  transform: scale(0.98);
+}
+
+.types__list li:hover::before,
+.types__list li:focus::before {
+  transform: scale(0.75);
+}
+
+.types__list li:hover::after,
+.types__list li:focus::after {
+  transform: scale(1.2);
+}

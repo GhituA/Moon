@@ -35,6 +35,8 @@
   color: $black-50;
   text-decoration: none;
 
+  transition: 0.2s;
+
   &:focus,
   &:hover {
     color: $grey-light;
@@ -51,6 +53,11 @@
     }
   }
 }
+
+.contacts__link::after {
+  @include blank-pseudo;
+}
+
 
 .contacts__link:focus .contacts__icon,
 .contacts__link:hover .contacts__icon {

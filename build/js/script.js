@@ -25,19 +25,7 @@
 
   mapBlock.classList.remove('map--no-js');
 
-  // var initMap = function () {
-  //   var myMap = new google.maps.Map(document.querySelector('.map__container'), {
-  //     zoom: 16,
-  //     center: {lat: 59.938568, lng: 30.322747}
-  //   });
-  // };
-
   var map;
-
-  function renderMap () {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap");
-    window.initMap = this.initMap;
-  }
 
   function initMap() {
     map = new google.maps.Map(document.getElementById('map__container'), {

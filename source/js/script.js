@@ -5,7 +5,7 @@
   var navBar = document.querySelector('.main-nav__bar');
   var navBtn = document.querySelector('.main-nav__toggle');
   var siteList = document.querySelector('.site-list');
-  var mapBlock = document.querySelector('.map');
+  // var mapBlock = document.querySelector('.map');
 
   /*  JS menu  */
 
@@ -22,17 +22,17 @@
   };
 
   /*  Map  */
-
-  mapBlock.classList.remove('map--no-js');
-
-  var map;
-
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map__container'), {
-      center: {lat: 59.938568, lng: 30.322747},
-      zoom: 16
-    });
-  }
+  //
+  // mapBlock.classList.remove('map--no-js');
+  //
+  // var map;
+  //
+  // function initMap() {
+  //   map = new google.maps.Map(document.getElementById('map__container'), {
+  //     center: {lat: 59.938568, lng: 30.322747},
+  //     zoom: 16
+  //   });
+  // }
 
   setMainNavActive();
 })();
