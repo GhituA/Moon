@@ -1,0 +1,136 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 120px;
+  margin-bottom: 224px;
+
+  background-color: $grey-back-dark;
+
+  @media (max-width: 1023px) {
+    padding-top: 70px;
+    margin-bottom: 136px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 104px;
+    padding-top: 84px;
+  }
+}
+
+.video__title {
+  margin: 0 0 20px;
+  padding: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: $white;
+  letter-spacing: -0.005em;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+}
+
+.video__text {
+  margin: 0 0 56px;
+  width: 340px;
+
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: $white-70;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 40px;
+    width: 435px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+    width: 288px;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.video__container {
+  margin-bottom: -106px;
+  width: 929px;
+  height: 522px;
+
+  background-color: $black;
+  background-image: url("../img/video@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -50px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video@2x.jpg");
+    background-size: 260px auto;
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: -94px;
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: -54px;
+    width: 288px;
+    height: 162px;
+
+    background-position-y: -12px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  width: 65px;
+  height: 65px;
+  margin-top: 16px;
+  margin-left: -32px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) and (max-width: 1023px) {
+    width: 90px;
+    height: 90px;
+
+    margin-top: 0;
+    margin-left: -45px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: -6px;
+  }
+}
+
+.video__button:hover,
+.video__button:focus {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.video__button:active {
+  transform: scale(0.8);
+  opacity: 0.3;
+}

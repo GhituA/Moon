@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  margin: 0 auto 150px;
+  margin: 0 auto;
   min-height: 825px;
 
   background-color: $grey-back-dark;
@@ -21,14 +21,13 @@
   }
 
   @media (max-width: 1023px) {
-    margin-bottom: 70px;
+
     min-height: auto;
     background-position-y: 385px;
     background-size: contain;
   }
 
   @media (max-width: 767px) {
-    margin-bottom: 70px;
     min-height: auto;
     background-position-y: 385px;
     background-size: contain;

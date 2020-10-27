@@ -7,8 +7,8 @@
   width: 100%;
 }
 
-.page-footer h2 {
-  margin-bottom: 30px;
+.page-footer___title {
+  margin-bottom: 12px;
   margin-left: -10px;
   padding: 0;
 
@@ -20,7 +20,8 @@
   text-align: center;
 
   @media (max-width: 1023px) {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    margin-left: 0;
     font-size: 24px;
   }
 
@@ -29,7 +30,7 @@
   }
 }
 
-.page-footer p {
+.page-footer__text {
   margin-bottom: 40px;
   margin-left: -10px;
   padding: 0;
@@ -42,11 +43,12 @@
 
   @media (max-width: 1023px) {
     margin-bottom: 20px;
+    margin-left: 0;
     width: 100%;
   }
 
   @media (max-width: 767px) {
     margin-bottom: 25px;
-    width: 288px;
+    width: 260px;
   }
 }
