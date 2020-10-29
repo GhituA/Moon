@@ -13,6 +13,14 @@
 
   /*  JS menu  */
 
+  var addClassToElement = function (element, className) {
+    element.classList.add(className);
+  };
+
+  var removeClassFromElement = function (element, className) {
+    element.classList.remove(className);
+  };
+
   var onMenuOpen = function () {
     removeClassFromElement(pageContainer, 'page-header--js');
     removeClassFromElement(navBar, 'menu-bar--closed');
@@ -23,14 +31,6 @@
     addClassToElement(page, 'page--lock');
   };
 
-  var addClassToElement = function (element, className) {
-    element.classList.add(className);
-  };
-
-  var removeClassFromElement = function (element, className) {
-    element.classList.remove(className);
-  };
-
   var onMenuClose = function () {
     removeClassFromElement(navLogo, 'menu-bar__logo--hidden');
     removeClassFromElement(page, 'page--lock');
@@ -38,6 +38,7 @@
     removeClassFromElement(siteList, 'main-nav__list--js');
     addClassToElement(pageContainer, 'page-header--js');
     addClassToElement(navBar, 'menu-bar--closed');
+    removeClassFromElement(navBar, 'menu-bar--open');
 
     for (var i = 0; i < navLinks.length; i++) {
       navLinks[i].removeEventListener('click', onMenuClose);
