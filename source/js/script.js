@@ -55,19 +55,21 @@
 
   /*  Map  */
 
-  var initMap = function () {
-    map = new google.maps.Map(document.getElementById(mapContainer), {
-      center: {lat: 59.938635, lng: 30.323118},
-      zoom: 15.5
-    });
-  };
-
   if (mapContainer) {
     mapBlock.classList.remove('map--no-js');
 
-    initMap();
-  }
+    var myMap = document.createElement('script');
+    myMap.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBk6uBmJpjAaLIfkYjehWvMqWQktKwuESw&language=ru&callback=initMap";
+    myMap.defer = true;
 
+    window.initMap = function () {
+      var map = new google.maps.Map(mapContainer, {
+        center: {lat: 59.938635, lng: 30.323118},
+        zoom: 15.5
+      });
+    }
+      document.head.appendChild(myMap);
+  }
 
   setMainNavActive();
 })();
