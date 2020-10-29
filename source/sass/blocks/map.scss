@@ -6,7 +6,7 @@
   background-color: $grey-back;
 
   @media (max-width: 1023px) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     width: 698px;
     height: 545px;
   }
@@ -14,7 +14,7 @@
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     width: 100%;
     height: 250px;
   }
@@ -29,7 +29,6 @@
 
   width: 958px;
   height: 530px;
-  object-fit: cover;
 
   @media (max-width: 1023px) {
     width: 698px;
@@ -47,5 +46,6 @@
 }
 
 .map__container {
+  width: 100%;
   height: 100%;
 }

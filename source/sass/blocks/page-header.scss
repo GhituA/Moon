@@ -4,7 +4,7 @@
   align-items: center;
 
   margin: 0 auto;
-  min-height: 825px;
+  padding-bottom: 240px;
 
   background-color: $grey-back-dark;
   background-image: url("../img/hero@1x.jpg");
@@ -16,40 +16,19 @@
     background-image: url("../img/hero@2x.jpg");
   }
 
-  @media (max-width: 1439px) {
-    width: 100%;
-  }
-
   @media (max-width: 1023px) {
-
-    min-height: auto;
-    background-position-y: 385px;
-    background-size: contain;
-  }
-
-  @media (max-width: 767px) {
-    min-height: auto;
-    background-position-y: 385px;
-    background-size: contain;
-  }
-
-  @media (max-width: 550px) {
-    background-size: auto 390px;
-  }
-
-  &--js {
-    @media (max-width: 1023px) {
-      background-position: center -102px;
-    }
-
-    @media (max-width: 767px) {
-      background-position: center 0;
-    }
+    padding-bottom: 0;
   }
 }
 
-.page-header--js .site-list {
+.page-header--js .main-nav__list {
   @media (max-width: 1023px) {
     display: none;
+  }
+}
+
+.page-header--js .menu-bar {
+  @media (max-width: 1023px) {
+    background-color: transparent;
   }
 }

@@ -21,6 +21,7 @@
 
 .video__title {
   margin: 0 0 20px;
+  margin-left: -10px;
   padding: 0;
 
   font-size: 30px;
@@ -30,7 +31,12 @@
   letter-spacing: -0.005em;
 
   @media (max-width: 1024px) {
+    margin-left: 0;
     font-size: 24px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: -10px;
   }
 }
 
@@ -51,7 +57,7 @@
   }
 
   @media (max-width: 767px) {
-    margin-bottom: 50px;
+    margin-bottom: 54px;
     width: 288px;
   }
 }
@@ -74,7 +80,6 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/video@2x.jpg");
-    background-size: 260px auto;
   }
 
   @media (max-width: 1023px) {
@@ -84,7 +89,7 @@
   }
 
   @media (max-width: 767px) {
-    margin-bottom: -54px;
+    margin-bottom: -58px;
     width: 288px;
     height: 162px;
 
@@ -120,8 +125,12 @@
   }
 
   @media (max-width: 767px) {
-    margin-top: -6px;
+    margin-top: -8px;
   }
+}
+
+.video__button:hover {
+  outline: 0;
 }
 
 .video__button:hover,

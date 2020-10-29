@@ -10,7 +10,11 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: $black;
   background-color: $white;
-  opacity: 1;
 
   counter-reset: section;
+
+  &--lock {
+    overflow-y: scroll;
+    position: fixed;
+  }
 }

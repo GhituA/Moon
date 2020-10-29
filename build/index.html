@@ -3,41 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
     <title>«Moon» - Магазин велосипедов</title>
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
     <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-
-
-    <!-- Pixel Glass -->
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url( "img/320.jpg" );
-    }
-    /* Планшет */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( "img/760.jpg" );
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 1024px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "img/960.jpg" );
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script> -->
-  <!-- // Pixel Glass -->
-
-
   </head>
   <body class="page">
 
@@ -46,58 +16,51 @@
     </div>
 
     <header class="page-header">
-<!--                            Навигация                            -->
-        <nav class="page-header__item main-nav">
-          <div class="main-nav__bar">
-            <img class="main-nav__logo" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
-            <button class="main-nav__toggle main-nav__toggle--hidden" type="button" aria-label="Открыть"></button>
-          </div>
-
-          <ul class="main-nav__list site-list">
-            <li>
-              <a class="site-list__link" href="#features">О нас</a>
-            </li>
-            <li>
-              <a class="site-list__link" href="#types">Виды велосипедов</a>
-            </li>
-            <li>
-              <a class="site-list__link" href="#video">Видео про велосипеды</a>
-            </li>
-            <li>
-              <a class="site-list__link" href="#contacts">Контакты</a>
-            </li>
+        <nav class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="#features">О нас</a></li>
+            <li><a class="main-nav__link" href="#types">Виды велосипедов</a></li>
+            <li><a class="main-nav__link" href="#video">Видео про велосипеды</a></li>
+            <li><a class="main-nav__link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
 
-        <div class="page-header__item site-intro">
+        <div class="page-header__bar menu-bar">
+          <a class="menu-bar__logo">
+            <img class="menu-bar__logo-img" src="img/moon-logo.svg" width="68" height="20" alt="Логотип «Moon»">
+          </a>
+          <button class="menu-bar__toggle menu-bar__toggle--hidden" type="button" aria-label="Открыть"></button>
+        </div>
+
+        <div class="page-header__intro site-intro">
           <div class="site-intro__head">
             <h1 class="site-intro__title">Мы продаем велосипеды</h1>
             <p class="site-intro__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
           </div>
-
-<!--                            Форма                            -->
-          <div class="site-intro__callback callback">
-            <p class="callback__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-            <form class="callback__form" method="post" action="https://echo.htmlacademy.ru" autocomplete="off">
-              <ul class="callback__list">
-                <li>
-                  <label class="visually-hidden" for="username">Имя</label>
-                  <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" required="">
-                </li>
-                <li>
-                  <label class="visually-hidden" for="phone">Телефон</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Введите Ваш номер телефона" required="">
-                </li>
-              </ul>
-              <button type="submit">Подобрать велосипед мечты</button>
-            </form>
-          </div>
         </div>
-
     </header>
 
     <main class="page-main">
-<!--                            Факты о нас                            -->
+
+      <section class="page-main__callback callback">
+        <div class="callback__container">
+          <p class="callback__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <form class="callback__form" method="post" action="https://echo.htmlacademy.ru" autocomplete="off">
+            <ul class="callback__list">
+              <li>
+                <label class="visually-hidden" for="username">Имя</label>
+                <input type="text" id="username" name="username" placeholder="Введите Ваше Имя" required="">
+              </li>
+              <li>
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Введите Ваш номер телефона" required="">
+              </li>
+            </ul>
+            <button type="submit">Подобрать велосипед мечты</button>
+          </form>
+        </div>
+      </section>
+
       <section class="page-main__features features" id="features">
         <h2 class="features__title">Несколько фактов о нас</h2>
         <ul class="features__list">
@@ -108,7 +71,6 @@
         </ul>
       </section>
 
-<!--                            Виды велосипедов                           -->
       <section class="page-main__features types" id="types">
         <h2 class="types__title">Виды велосипедов</h2>
         <ul class="types__list">
@@ -144,27 +106,24 @@
               <h3 class="types__name">Детский велосипед</h3>
             </a>
           </li>
-
         </ul>
       </section>
 
-<!--                            Видео                           -->
-    <section class="page-main__video video" id="video">
-      <h2 class="video__title">Видео про велосипеды</h2>
-      <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-      <div class="video__wrapper">
-        <video class="video__container"></video>
-        <button class="video__button" type="button" aria-label="Воспроизвести видео"></button>
-      </div>
-    </section>
+      <section class="page-main__video video" id="video">
+        <h2 class="video__title">Видео про велосипеды</h2>
+        <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__wrapper">
+          <video class="video__container"></video>
+          <button class="video__button" type="button" aria-label="Воспроизвести видео"></button>
+        </div>
+      </section>
 
     </main>
 
-<!--                            Футер                           -->
     <footer class="page-footer" id="contacts">
       <h2 class="page-footer___title">Как нас найти?</h2>
       <p class="page-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-<!--                            Карта                            -->
+
       <section class="page-footer__map map map--no-js">
         <div class="map__container" id="map__container"></div>
         <picture>
@@ -172,8 +131,9 @@
             <!-- 1х: 957px; 2x: 1914px -->
           <img class="map__image" src="img/map@1x.jpg" width="957" height="530" srcset="img/map@2x.jpg 2x" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19" data-object-fit="cover">
         </picture>
+
       </section>
-<!--                            Контакты                            -->
+
       <section class="page-footer__contacts contacts">
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -198,6 +158,6 @@
 
     <script src="js/script.js"></script>
     <script src="js/vendor.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk6uBmJpjAaLIfkYjehWvMqWQktKwuESw&callback=initMap"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk6uBmJpjAaLIfkYjehWvMqWQktKwuESw&language=ru&callback=initMap"></script>
   </body>
 </html>

@@ -1,12 +1,13 @@
 .site-intro {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   width: 880px;
   color: $white;
 
   @media (max-width: 1023px) {
-    flex-direction: column;
+    order: 3;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -17,21 +18,21 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: 47px;
   width: 44%;
 
   @media (max-width: 1023px) {
-    padding-top: 84px;
+    padding-top: 86px;
+    padding-bottom: 80px;
     width: 525px;
-    min-height: 290px;
+
 
     align-items: center;
   }
 
   @media (max-width: 767px) {
     padding-top: 70px;
+    padding-bottom: 72px;
     width: 90%;
-    min-height: 340px;
   }
 }
 
@@ -44,7 +45,7 @@
   font-weight: 700;
 
   @media (max-width: 1023px) {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     font-size: 30px;
     line-height: 42px;
     text-align: center;

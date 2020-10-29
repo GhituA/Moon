@@ -16,7 +16,6 @@
   line-height: 30px;
   font-weight: 600;
   color: $grey-dark;
-  letter-spacing: -0.9px;
   text-align: center;
 
   @media (max-width: 1023px) {
@@ -48,7 +47,7 @@
   }
 
   @media (max-width: 767px) {
-    margin-bottom: 25px;
+    margin-bottom: 19px;
     width: 260px;
   }
 }
