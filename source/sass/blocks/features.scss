@@ -7,6 +7,10 @@
   padding: 0 calc(50% - 583px);
   padding-top: 150px;
 
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    width: 100%;
+  }
+
   @media (max-width: $desktop-width) {
     margin-bottom: 25px;
     padding: 0 calc(50% - 278px);
