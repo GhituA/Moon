@@ -5,13 +5,13 @@
 
   background-color: $grey-back;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 22px;
     width: 698px;
     height: 545px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
@@ -30,12 +30,12 @@
   width: 958px;
   height: 530px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     width: 698px;
     height: 545px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     width: 320px;
     height: 250px;
   }

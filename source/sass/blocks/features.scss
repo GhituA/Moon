@@ -4,19 +4,17 @@
   align-items: center;
 
   margin: 0 auto 108px;
+  padding: 0 calc(50% - 583px);
   padding-top: 150px;
-  width: $desktop-full-width;
 
-  @media (max-width: 1439px) {
-    width: 100%;
-  }
-
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 25px;
+    padding: 0 calc(50% - 278px);
     padding-top: 70px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
+    padding: 70px 0 0;
     margin-bottom: 34px;
   }
 }
@@ -31,7 +29,7 @@
   color: $grey-dark;
   text-align: center;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 32px;
     font-size: 24px;
     line-height: 41px;
@@ -44,20 +42,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 1166px;
+  width: 100%;
 
-  @media (max-width: 1439px) {
-    width: 100%;
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    justify-content: center;
   }
 
-  @media (max-width: 1023px) {
-    width: 72%;
-  }
-
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 }
 
@@ -73,11 +66,7 @@
   text-align: center;
   letter-spacing: -0.5px;
 
-  @media (min-width: 1024px) and (max-width: 1439px) {
-    width: 22%;
-  }
-
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 35px;
     padding-top: 45px;
     min-height: 125px;
@@ -108,7 +97,7 @@
 
   color: $cyan;
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     font-family: "Overpass", "Arial", sans-serif;
   }
 }

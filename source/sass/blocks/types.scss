@@ -3,17 +3,16 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 148px 0 100px;
+  padding: 148px calc(50% - 563px) 100px;
   width: 100%;
-
   background-color: $grey-back-light;
 
-  @media (max-width: 1023px) {
-    padding: 50px 0 20px;
+  @media (max-width: $desktop-width) {
+    padding: 50px calc(50% - 295px) 20px;
   }
 
-  @media (max-width: 767px) {
-    padding-bottom: 15px;
+  @media (max-width: $tablet-width) {
+    padding: 50px calc(50% - 135px) 15px;
   }
 }
 
@@ -27,7 +26,7 @@
   color: $grey-dark;
   letter-spacing: -0.005em;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 41px;
@@ -37,22 +36,12 @@
 .types__list {
   @include list-reset;
   display: flex;
+  justify-content: center;
 
   flex-wrap: wrap;
+  width: 100%;
 
-  width: 1126px;
-
-  @media (max-width: 1200px) {
-    width: 100%;
-  }
-
-  @media (max-width: 1023px) {
-    width: 590px;
-    justify-content: center;
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
   }
@@ -65,6 +54,10 @@
 
   width: 342px;
 
+  @media (min-width: 1024px) and (max-width: 1126px) {
+    margin-right: 2%;
+  }
+
   &::before,
   &::after {
     transition: 0.5s;
@@ -73,6 +66,10 @@
   &:nth-child(3n) {
     margin-right: 0;
     margin-top: -10px;
+
+    @media (min-width: 1024px) and (max-width: 1126px) {
+      margin-right: 2%;
+    }
   }
 
   &:nth-child(3n-1) {
@@ -81,8 +78,8 @@
 
   &:nth-child(3n-2)::before {
     position: absolute;
-    content: " ";
-    z-index: 0;
+    content: "";
+    z-index: 1;
 
     top: 0;
     left: 0;
@@ -99,8 +96,8 @@
   &:nth-child(3n-1)::before,
   &:nth-child(3n-1)::after {
     position: absolute;
-    content: " ";
-    z-index: 2;
+    content: "";
+    z-index: 3;
 
     width: 47px;
     height: 47px;
@@ -124,10 +121,10 @@
     margin-right: -22px;
   }
 
-  &:nth-child(3n)::after {
+  &:nth-child(3n)::before {
     position: absolute;
-    content: " ";
-    z-index: 2;
+    content: "";
+    z-index: 3;
 
     top: 0;
     right: 0;
@@ -142,20 +139,20 @@
     border-radius: 50%;
   }
 
-  &:nth-child(3n-2) img {
+  &:nth-child(3n-2) .types__img {
     height: 503px;
   }
 
-  &:nth-child(3n-1) img {
+  &:nth-child(3n-1) .types__img {
     height: 566px;
   }
 
-  &:nth-child(3n) img {
+  &:nth-child(3n) .types__img {
     height: 512px;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $desktop-width) {
   .types__list li {
     margin-right: 0;
     margin-bottom: 50px;
@@ -187,7 +184,7 @@
       content: none;
     }
 
-    &:nth-child(3n)::after {
+    &:nth-child(3n)::before {
 
       margin-top: -20px;
       margin-right: -25px;
@@ -197,16 +194,16 @@
       border: 13px solid $cyan;
     }
 
-    &:nth-child(3n-2) img,
-    &:nth-child(3n-1) img,
-    &:nth-child(3n) img {
+    &:nth-child(3n-2) .types__img,
+    &:nth-child(3n-1) .types__img,
+    &:nth-child(3n) .types__img {
       height: 300px;
     }
   }
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: $tablet-width) {
   .types__list li {
     margin-bottom: 40px;
 
@@ -222,23 +219,14 @@
       margin-top: 3px;
     }
 
-    &:nth-child(3n)::after {
+    &:nth-child(3n)::before {
       margin-right: -14px;
       margin-top: -20px;
     }
   }
 }
 
-@media (min-width: $desktop-width) and (max-width: 1200px) {
-  .types__list li {
-    width: 30%;
-  }
-}
-
 .types__link {
-  position: relative;
-  z-index: 1;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,7 +246,9 @@
   color: $black;
 }
 
-.types__link img {
+.types__img {
+  position: relative;
+  z-index: 2;
   margin-bottom: 20px;
   border-radius: 10px;
 
@@ -266,7 +256,7 @@
 
   transition: 0.1s;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     width: 270px;
     height: 300px;
   }
@@ -279,12 +269,12 @@
   color: $cyan;
 }
 
-.types__link:hover img,
-.types__link:focus img {
+.types__link:hover .types__img,
+.types__link:focus .types__img {
   transform: scale(0.98);
 }
 
-.types__link:active .img {
+.types__link:active .types__img {
   transform: scale(0.9);
 }
 

@@ -4,7 +4,9 @@
   align-items: center;
 
   margin: 0 auto;
+  padding: 0 calc(50% - 440px);
   padding-bottom: 240px;
+  min-height: 825px;
 
   background-color: $grey-back-dark;
   background-image: url("../img/hero@1x.jpg");
@@ -16,19 +18,24 @@
     background-image: url("../img/hero@2x.jpg");
   }
 
-  @media (max-width: 1023px) {
-    padding-bottom: 0;
+  @media (max-width: $desktop-width) {
+    padding: 0;
+    min-height: 340px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 390px;
   }
 }
 
 .page-header--js .main-nav__list {
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 }
 
 .page-header--js .menu-bar {
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     background-color: transparent;
   }
 }

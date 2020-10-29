@@ -18,13 +18,13 @@
   color: $grey-dark;
   text-align: center;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 2px;
     margin-left: 0;
     font-size: 24px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     font-size: 18px;
   }
 }
@@ -40,13 +40,13 @@
   color: $black-70;
   text-align: center;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 20px;
     margin-left: 0;
     width: 100%;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 19px;
     width: 260px;
   }
