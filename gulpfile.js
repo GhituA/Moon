@@ -15,6 +15,9 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var concat = require("gulp-concat");
+var wrap = require("gulp-wrap");
+var replace = require('gulp-replace');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -32,11 +35,6 @@ gulp.task('css', function () {
       .pipe(server.stream());
 });
 
-gulp.task('js', function () {
-  return gulp.src('source/js/script.js')
-      .pipe(gulp.dest('build/js'));
-});
-
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -49,7 +47,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("scripts", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -60,6 +58,8 @@ gulp.task("refresh", function (done) {
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({quality: 85, progressive: true}),
       imagemin.svgo()
     ]))
 
@@ -87,11 +87,20 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("scripts", function() {
+  return gulp.src("source/js/main/*.js")
+    .pipe(concat("all.js"))
+    .pipe(replace(/'use strict';/g, ''))
+    .pipe(wrap('"use strict";\n (function() {<%= contents %>})();'))
+    .pipe(rename("main.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    "source/js/*.js",
     "source//*.ico"
     ], {
       base: "source"
@@ -103,5 +112,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "scripts"));
 gulp.task("start", gulp.series("build", "server"));
