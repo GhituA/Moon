@@ -1,16 +1,21 @@
 .callback {
+  position: absolute;
+  top: 322px;
+
   display: flex;
   flex-direction: row-reverse;
-  margin: 0 auto;
-  margin-top: -503px;
-  margin-bottom: 240px;
+
+  margin: 0 auto 240px;
   padding: 0 calc(50% - 440px);
+  width: 100%;
 
   @media (max-width: $desktop-width) {
+    position: static;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
     padding-top: 70px;
+    background-color: $white;
   }
 }
 
@@ -25,7 +30,7 @@
   }
 }
 
-.callback__text {
+.callback p {
   margin: 0 0 20px;
 
   font-size: 17px;
@@ -51,7 +56,7 @@
   }
 }
 
-.callback__form {
+.callback form {
   width: 100%;
 
   @media (max-width: $desktop-width) {
@@ -72,11 +77,11 @@
   margin-bottom: 18px;
 }
 
-.callback__form input {
+.callback__list-item input {
   display: block;
 
-  padding-top: 14px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 29px;
   margin-bottom: 18px;
   width: 100%;
@@ -117,13 +122,13 @@
   }
 }
 
-.callback__list li:last-child input {
+.callback__list-item:last-child input {
   margin-bottom: 0;
 }
 
-.callback__form button {
-  padding-top: 14px;
-  padding-bottom: 10px;
+.callback button {
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 100%;
   height: 51px;
 

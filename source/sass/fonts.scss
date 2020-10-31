@@ -3,7 +3,10 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("OpenSans-Regular"), local("Open Sans Regular"), url("../fonts/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular.woff") format("woff");
+  src: local("OpenSans-Regular"),
+    local("Open Sans Regular"),
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +14,10 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local("OpenSans-Light"), local("Open Sans Light"), url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff");
+  src: local("OpenSans-Light"),
+    local("Open Sans Light"),
+    url("../fonts/opensans-light.woff2") format("woff2"),
+    url("../fonts/opensans-light.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +25,10 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("OpenSans-SemiBold"), local("Open Sans SemiBold"), url("../fonts/opensans-semibold.woff2") format("woff2"), url("../opensans-semibold.woff") format("woff");
+  src: local("OpenSans-SemiBold"),
+    local("Open Sans SemiBold"),
+    url("../fonts/opensans-semibold.woff2") format("woff2"),
+    url("../opensans-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +36,10 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("OpenSans-Bold"), local("Open Sans Bold"), url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff");
+  src: local("OpenSans-Bold"),
+    local("Open Sans Bold"),
+    url("../fonts/opensans-bold.woff2") format("woff2"),
+    url("../fonts/opensans-bold.woff") format("woff");
 }
 
 @font-face {
@@ -35,5 +47,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/overpass-bold.woff2") format("woff2"), url("../fonts/overpass-bold.woff") format("woff");
+  src: local("Overpass-Bold"),
+    local("Overpass Bold"),
+    url("../fonts/overpass-bold.woff2") format("woff2"),
+    url("../fonts/overpass-bold.woff") format("woff");
 }

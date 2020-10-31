@@ -23,7 +23,7 @@
   }
 }
 
-.features__title {
+.features h2 {
   margin: 0 0 52px;
   padding: 0;
 
@@ -40,7 +40,7 @@
   }
 }
 
-.features__list {
+.features ul {
   @include list-reset;
   display: flex;
   justify-content: space-between;
@@ -58,7 +58,7 @@
   }
 }
 
-.features__list-item {
+.features li {
   position: relative;
 
   margin-bottom: 46px;
@@ -84,7 +84,7 @@
   }
 }
 
-.features__list-item::before {
+.features li::before {
   counter-increment: section;
   content: "0" counter(section);
 

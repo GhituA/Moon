@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -14,6 +15,6 @@
   counter-reset: section;
 
   &--lock {
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 }

@@ -3,23 +3,35 @@
   flex-direction: column;
   justify-content: space-between;
 
-  padding-right: calc(100% - 390px);
+  padding-top: 368px;
   width: 100%;
+  min-height: 825px;
   color: $white;
 
+  background-color: $grey-back-dark;
+  background-image: url("../img/hero@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero@2x.jpg");
+  }
+
   @media (max-width: $desktop-width) {
-    order: 3;
     align-items: center;
     justify-content: flex-start;
 
-    padding-right: 0;
+    padding-top: 52px;
+    min-height: 340px;
   }
 }
 
-.site-intro__head {
+.site-intro__container {
   display: flex;
   flex-direction: column;
 
+  padding: 0 calc(50% - 440px);
   width: 100%;
 
   @media (max-width: $desktop-width) {
@@ -36,9 +48,10 @@
   }
 }
 
-.site-intro__title {
+.site-intro h1 {
   margin: 0 0 24px;
   padding: 0;
+  width: 47%;
 
   font-size: 46px;
   line-height: 64px;
@@ -49,11 +62,14 @@
     font-size: 30px;
     line-height: 42px;
     text-align: center;
+
+    width: 100%;
   }
 }
 
-.site-intro__text {
+.site-intro p {
   margin: 0;
+  width: 47%;
 
   font-size: 20px;
   line-height: 32px;
@@ -61,10 +77,11 @@
   font-weight: 300;
 
   @media (max-width: $desktop-width) {
-    width: 435px;
     font-size: 18px;
     line-height: 32px;
     text-align: center;
+
+    width: 57%;
   }
 
   @media (max-width: $tablet-width) {

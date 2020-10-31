@@ -24,12 +24,14 @@
 }
 
 .menu-bar__logo {
+  line-height: 0;
+
   &--hidden {
     display: none;
   }
 }
 
-.menu-bar__logo-img {
+.menu-bar__logo img {
   @media (max-width: $desktop-width) {
     margin-top: 25px;
     margin-left: 22px;
