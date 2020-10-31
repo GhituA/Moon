@@ -1195,7 +1195,7 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: -0.005em; }
   @media (max-width: 1023px) {
     .types h2 {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       font-size: 24px;
       line-height: 41px; } }
 
@@ -1397,7 +1397,7 @@ input[type="checkbox"].visually-hidden {
       margin-bottom: 136px; } }
   @media (max-width: 767px) {
     .video {
-      margin-bottom: 104px;
+      margin-bottom: 106px;
       padding-top: 84px; } }
 
 .video h2 {
