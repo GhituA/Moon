@@ -18,7 +18,6 @@
     siteList.classList.add('main-nav__list--js');
     navBar.classList.add('menu-bar--open');
     page.classList.add('page--lock');
-
   };
 
 
@@ -30,6 +29,10 @@
     navBar.classList.remove('menu-bar--open');
     pageContainer.classList.add('page-header--js');
     navBar.classList.add('menu-bar--closed');
+
+    for (var j = 0; j < navLinks.length; j++) {
+      navLinks[j].removeEventListener('click', onMenuClose);
+    }
   };
 
   var setMainNavActive = function () {
@@ -43,10 +46,6 @@
         evt.preventDefault();
         if (navBtn.classList.contains('menu-bar__toggle--open')) {
           onMenuClose();
-          for (var j = 0; j < navLinks.length; j++) {
-            navLinks[j].removeEventListener('click', onMenuClose);
-          }
-
         } else {
           onMenuOpen();
           if (siteList.classList.contains('main-nav__list--js') && navLinks.length > 0) {
