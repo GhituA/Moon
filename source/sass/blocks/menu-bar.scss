@@ -1,9 +1,12 @@
 .menu-bar {
+  position: absolute;
+  top: 318px;
+  left: 0;
+
   display: flex;
   justify-content: space-between;
 
-  margin: 0 auto;
-  margin-bottom: 22px;
+  padding: 0 calc(50% - 440px);
   width: 100%;
 
   @media (max-width: $desktop-width) {
