@@ -977,6 +977,8 @@ input[type="checkbox"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1009,6 +1011,7 @@ input[type="checkbox"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 42px;
+  margin-bottom: 24px;
   font-size: 16px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5);
@@ -1021,8 +1024,7 @@ input[type="checkbox"].visually-hidden {
     color: #0ad9c6; }
   @media (max-width: 767px) {
     .contacts__link--phone {
-      margin-left: -18px;
-      margin-top: 24px; } }
+      margin-left: -18px; } }
 
 .contacts__link::after {
   content: "  ";

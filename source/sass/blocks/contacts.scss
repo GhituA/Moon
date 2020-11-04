@@ -2,6 +2,7 @@
   @include list-reset;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   padding-left: 196px;
@@ -29,6 +30,7 @@
   align-items: center;
 
   padding-left: 42px;
+  margin-bottom: 24px;
 
   font-size: 16px;
   line-height: 22px;
@@ -49,7 +51,6 @@
   &--phone {
     @media (max-width: $tablet-width) {
       margin-left: -18px;
-      margin-top: 24px;
     }
   }
 }
