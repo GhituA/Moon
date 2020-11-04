@@ -10,7 +10,8 @@
   width: 100%;
 
   @media (max-width: $desktop-width) {
-    order: 1;
+    position: static;
+    padding: 0;
     margin-bottom: 0;
 
     background-color: $white;
