@@ -1,24 +1,26 @@
 .types {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 
-  padding: 148px calc(50% - 563px) 100px;
+  padding: 148px 0 100px;
   width: 100%;
   background-color: $grey-back-light;
 
-  @media (min-width: 1024px) and (max-width: 1126px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   @media (max-width: $desktop-width) {
-    padding: 50px calc(50% - 295px) 20px;
+    padding: 50px 0 20px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 50px calc(50% - 135px) 15px;
+    padding: 50px 0 15px;
   }
+}
+
+.types__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
 }
 
 .types h2 {
@@ -41,12 +43,23 @@
 .types__list {
   @include list-reset;
   display: flex;
-  justify-content: center;
-
   flex-wrap: wrap;
+
+  padding: 0 calc(50% - 563px);
   width: 100%;
 
+  @media (max-width: 1250px) {
+    padding: 0 calc(50% - 462px);
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 0 calc(50% - 295px);
+    width: 100%;
+    justify-content: center;
+  }
+
   @media (max-width: $tablet-width) {
+    padding: 0 calc(50% - 135px);
     flex-direction: column;
     align-items: center;
   }
@@ -59,8 +72,8 @@
 
   width: 342px;
 
-  @media (min-width: 1024px) and (max-width: 1126px) {
-    width: 30%;
+  @media (max-width: 1250px) {
+    width: 274px;
   }
 
   &::before,
@@ -241,6 +254,10 @@
   width: 342px;
 
   transition: 0.1s;
+
+  @media (max-width: 1250px) {
+    width: 277px;
+  }
 
   @media (max-width: $desktop-width) {
     width: 270px;

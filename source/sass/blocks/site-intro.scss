@@ -1,9 +1,7 @@
 .site-intro {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
-  padding-top: 368px;
+  padding: 368px calc(50% - 440px) 0;
   width: 100%;
   min-height: 825px;
   color: $white;
@@ -19,9 +17,8 @@
   }
 
   @media (max-width: $desktop-width) {
-    align-items: center;
-    justify-content: flex-start;
-
+    justify-content: center;
+    padding: 0;
     padding-top: 52px;
     min-height: 340px;
   }
@@ -31,14 +28,14 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0 calc(50% - 440px);
-  width: 100%;
+  width: 44%;
 
   @media (max-width: $desktop-width) {
     align-items: center;
 
     padding-top: 82px;
     padding-bottom: 80px;
+    width: 54%;
   }
 
   @media (max-width: $tablet-width) {
@@ -51,7 +48,7 @@
 .site-intro h1 {
   margin: 0 0 24px;
   padding: 0;
-  width: 47%;
+  width: 100%;
 
   font-size: 46px;
   line-height: 64px;
@@ -62,14 +59,12 @@
     font-size: 30px;
     line-height: 42px;
     text-align: center;
-
-    width: 100%;
   }
 }
 
 .site-intro p {
   margin: 0;
-  width: 47%;
+  width: 100%;
 
   font-size: 20px;
   line-height: 32px;
@@ -80,11 +75,5 @@
     font-size: 18px;
     line-height: 32px;
     text-align: center;
-
-    width: 57%;
-  }
-
-  @media (max-width: $tablet-width) {
-    width: 92%;
   }
 }
